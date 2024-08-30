@@ -120,14 +120,14 @@ if phone_number or email or (len(date_range) == 2):
             (filtered_df['registration'].dt.date <= end_date)
         ]
 
-    if not filtered_df.empty:
-        st.subheader(f'Filtered User Data from {start_date} to {end_date}')
-        st.dataframe(filtered_df)
+        if not filtered_df.empty:
+            st.subheader(f'Filtered User Data from {start_date} to {end_date}')
+            st.dataframe(filtered_df)
 
-        fig = px.histogram(filtered_df, x='registration', title='User Registrations per Day')
-        st.plotly_chart(fig)
-    filter_total_users = len(filtered_df)
-    st.sidebar.write(f"Total Users after using filter: {filter_total_users}")
+            fig = px.histogram(filtered_df, x='registration', title='User Registrations per Day')
+            st.plotly_chart(fig)
+        filter_total_users = len(filtered_df)
+        st.sidebar.write(f"Total Users after using filter: {filter_total_users}")
     else:
         st.write("No data available for the selected filters.")
 else:
