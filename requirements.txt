@@ -1,0 +1,7 @@
+streamlit
+appwrite
+plotly
+requests
+datetime
+pandas
+toml
