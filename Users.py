@@ -126,8 +126,8 @@ if phone_number or email or (len(date_range) == 2):
 
         fig = px.histogram(filtered_df, x='registration', title='User Registrations per Day')
         st.plotly_chart(fig)
-        filter_total_users = len(filtered_df)
-        st.sidebar.write(f"Total Users after using filter: {filter_total_users}")
+    filter_total_users = len(filtered_df)
+    st.sidebar.write(f"Total Users after using filter: {filter_total_users}")
     else:
         st.write("No data available for the selected filters.")
 else:
