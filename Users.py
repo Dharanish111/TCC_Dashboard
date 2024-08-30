@@ -68,7 +68,7 @@ st.sidebar.write(f"Total Users: {total_users}")
 
 col1,col2,col3 =st.columns([3,1,3])
 with col2:
-    st.image("https://github.com/Dharanish111/TCC_Dashboard/blob/main/1.png?raw=true",width = 195)
+    st.image("https://raw.githubusercontent.com/Dharanish111/TCC_Dashboard/main/Pics/1.png",width = 195)
 
 st.title("Users 👤")
 
